@@ -48,12 +48,12 @@ if uploaded_file is not None:
 elif use_example_file:
     st.write("An example file was loaded")
     ge_matrix = './Data/example_data.tsv'
-    ge_df = pd.read_csv(ge_matrix,sep='\t')
+    ge_df = pd.read_csv(ge_matrix,sep='\t',index_col=0)
  
 else:
     st.write("An example file was preloaded")
     ge_matrix = './Data/example_data.tsv'
-    ge_df = pd.read_csv(ge_matrix,sep='\t')
+    ge_df = pd.read_csv(ge_matrix,sep='\t',index_col=0)
 
 st.header('Characteristics of loaded scRNA-seq data')
 
